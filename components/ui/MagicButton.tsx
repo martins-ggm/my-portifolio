@@ -13,4 +13,4 @@ export const MagicButton = ({ title, icon, position, handleClick, otherClasses }
     )
 }
 
-
+export default MagicButton

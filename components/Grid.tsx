@@ -1,15 +1,29 @@
-import React from 'react'
-import { BentoGrid, BentoGridItem } from './ui/bento-grid'
-import { ImInsertTemplate } from 'react-icons/im'
-import { gridItems } from '@/data'
+import { gridItems } from "@/data";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
-export const Grid = () => {
+const Grid = () => {
     return (
-        <section id='about'>
-            <BentoGrid>{gridItems.map(
-                ({ id, title, description, className, img, imgClassName, titleClassName, spareImg }) => (<BentoGridItem id={id} key={id} title={title} description={description} className={className} img={img} imgClassName={imgClassName} titleClassName={titleClassName} spareImg={spareImg}>
-
-                </BentoGridItem>))}</BentoGrid>
+        <section id="about">
+            <BentoGrid>
+                {gridItems.map(({ id, title, description, className, img, imgClassName, titleClassName, spareImg, descriptionClassName }) => (
+                    <BentoGridItem
+                        id={id}
+                        key={id}
+                        title={title}
+                        description={description}
+                        // remove icon prop
+                        // remove original classname condition
+                        className={className}
+                        img={img}
+                        imgClassName={imgClassName}
+                        titleClassName={titleClassName}
+                        spareImg={spareImg}
+                        descriptionCLassName={descriptionClassName}
+                    />
+                ))}
+            </BentoGrid>
         </section>
-    )
-}
+    );
+};
+
+export default Grid;
