@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoMdDownload } from "react-icons/io";
 
 
 // Also install this npm i --save-dev @types/react-lottie
@@ -58,21 +58,25 @@ export const BentoGridItem = ({
     const leftLists = ["ReactJS", "Express", "Typescript"];
     const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
 
-    const [copied, setCopied] = useState(false);
+    const [downloaded, setDownloaded] = useState(false);
 
     const defaultOptions = {
-        loop: copied,
-        autoplay: copied,
+        loop: downloaded,
+        autoplay: downloaded,
         animationData: animationData,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
         },
     };
 
-    const handleCopy = () => {
-        const text = "guilherme.pmartins04@gmail.com"; // Don't copy for any problem!!
-        navigator.clipboard.writeText(text);
-        setCopied(true);
+    const Download = () => {
+        const link = document.createElement('a');
+        link.href = '/Curriculo.pdf'
+        link.download = 'Curriculo.pdf'
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setDownloaded(true);
     };
 
     return (
@@ -174,22 +178,18 @@ export const BentoGridItem = ({
                     )}
                     {id === 6 && (
                         <div className="mt-5 relative">
-                            {/* button border magic from tailwind css buttons  */}
-                            {/* add rounded-md h-8 md:h-8, remove rounded-full */}
-                            {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
-                            {/* add handleCopy() for the copy the text */}
                             <div
-                                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
+                                className={`absolute -bottom-5 right-0 ${downloaded ? "block" : "block"
                                     }`}
                             >
                                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                                 <Lottie options={defaultOptions} height={200} width={400} />
                             </div>
 
-                            <MagicButton title={copied ? 'Email is Copied!' : 'Copy my email address'}
-                                icon={<IoCopyOutline />}
+                            <MagicButton title={downloaded ? 'Olhe com carinho :)' : 'meu-currículo.pdf'}
+                                icon={<IoMdDownload />}
                                 position="left"
-                                handleClick={handleCopy}
+                                handleClick={Download}
                                 otherClasses="!bg-[#161A31]">
                             </MagicButton>
                         </div>

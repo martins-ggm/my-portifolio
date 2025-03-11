@@ -59,7 +59,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Perguntas? me mande um e-mail ;)",
+    title: "Baixe meu currículo e veja mais detalhes sobre a minha carreira!",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
