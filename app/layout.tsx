@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Martins's Portfolio",
+  title: "Guilherme Martins | Portifolio",
   description: "Modern & Minimalist JS Mastery Portfolio",
+  icons: {
+    icon: "/favicon.png",
+  },
+  
 };
 
 export default function RootLayout({
