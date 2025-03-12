@@ -54,7 +54,7 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute brightness-50",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "eupc.JPEG",
+    img: "/eupc.JPEG",
     spareImg: "",
   },
   {
