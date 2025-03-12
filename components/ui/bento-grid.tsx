@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdDownload } from "react-icons/io";
 import Image from "next/image";
 
@@ -70,7 +70,10 @@ export const BentoGridItem = ({
         },
     };
 
+
+    
     const Download = () => {
+        useEffect(() => {
         const link = document.createElement('a');
         link.href = '/Curriculo.pdf'
         link.download = 'Curriculo.pdf'
@@ -78,6 +81,7 @@ export const BentoGridItem = ({
         link.click();
         document.body.removeChild(link);
         setDownloaded(true);
+    }, []);
     };
 
     return (
