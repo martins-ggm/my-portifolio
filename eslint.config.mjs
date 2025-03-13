@@ -11,6 +11,13 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    plugins: ["next"],
+    rules: {
+      "next/no-document-import-in-page": "error",
+      // Outras regras que você deseja adicionar
+    },
+  },
 ];
 
 export default eslintConfig;
