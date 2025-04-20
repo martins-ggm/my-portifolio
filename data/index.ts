@@ -1,14 +1,15 @@
 export const navItems = [
   { name: "Sobre", link: "#about" },
   { name: "Projetos", link: "#projects" },
-  { name: "GitHub", link: "https://github.com/sqrggm"}
+  { name: "GitHub", link: "https://github.com/sqrggm" },
 ];
 
 export const gridItems = [
   {
     id: 1,
     title: "experiências e desafios",
-    description: "Apenas um apreciador de SRPGs e Consoles Retro, sempre em busca de novas",
+    description:
+      "Apenas um apreciador de SRPGs e Consoles Retro, sempre em busca de novas",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] ",
     imgClassName: "w-full h-full blur-sm  brightness-50 contrast-110",
     titleClassName: "justify-center",
@@ -52,9 +53,9 @@ export const gridItems = [
     title: "",
     description: "",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute brightness-50",
+    imgClassName: "brightness-75 md:h-full lg:h-auto w-full",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/eupc.JPEG",
+    img: "/Game-Dev.png",
     spareImg: "",
   },
   {
@@ -78,7 +79,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     link: "",
   },
- 
+
   {
     id: 2,
     title: "Em progresso...",
@@ -93,11 +94,11 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "https://github.com/sqrggm"
+    link: "https://github.com/sqrggm",
   },
   {
     id: 2,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/sqrggm/"
+    link: "https://www.linkedin.com/in/sqrggm/",
   },
 ];

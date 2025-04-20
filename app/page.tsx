@@ -10,13 +10,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Meu Site - Página Inicial</title> {/* Defina o título aqui */}
-        <meta name="description" content="Bem-vindo ao meu site!" /> {/* Meta descrição */}
-        <link rel="icon" href="/favicon.ico" /> {/* Defina o caminho para o favicon */}
+        <title>Meu Site - Página Inicial</title>
+        <meta name="description" content="Bem-vindo ao meu site!" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
         <div className="max-w-7xl w-full">
-          <FloatingNav navItems={navItems}></FloatingNav>
+          <div className="hidden sm:block">
+            <FloatingNav navItems={navItems}></FloatingNav>
+          </div>
           <Hero></Hero>
           <Grid></Grid>
           <RecentProjects></RecentProjects>
