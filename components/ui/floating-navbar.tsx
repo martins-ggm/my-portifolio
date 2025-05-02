@@ -22,21 +22,19 @@ export const FloatingNav = ({
 }) => {
     const { scrollYProgress } = useScroll();
 
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(true);
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         // Check if current is not undefined and is a number
         if (typeof current === "number") {
             const direction = current! - scrollYProgress.getPrevious()!;
 
-            if (scrollYProgress.get() < 0.05) {
+            if (scrollYProgress.get() > 0.05) {
                 setVisible(false);
             } else {
-                if (direction < 0) {
-                    setVisible(true);
-                } else {
-                    setVisible(false);
-                }
+
+                setVisible(true);
+
             }
         }
     });
@@ -45,8 +43,7 @@ export const FloatingNav = ({
         <AnimatePresence mode="wait">
             <motion.div
                 initial={{
-                    opacity: 1,
-                    y: -100,
+
                 }}
                 animate={{
                     y: visible ? 0 : -100,
@@ -61,20 +58,17 @@ export const FloatingNav = ({
                 )}
             >
                 {navItems.map((navItem, idx: number) => (
-
                     <Link
                         key={`link=${idx}`}
                         href={navItem.link}
                         className={cn(
                             "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                         )}
+                        {...(idx === 2 ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     >
-
                         <span className="block sm:hidden">{navItem.icon}</span>
                         <span className="hidden sm:block text-sm">{navItem.name}</span>
-
                     </Link>
-
                 ))}
                 <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
                     <a href="#contact">

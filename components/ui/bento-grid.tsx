@@ -52,7 +52,7 @@ export const BentoGridItem = ({
     descriptionClassName?: string | React.ReactNode;
 }) => {
     const leftLists = ["ReactJS", "Express", "Typescript"];
-    const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+    const rightLists = ["Tailwind", "NextJS", "MySQL"];
     const [downloaded, setDownloaded] = useState(false);
 
     const defaultOptions = {
@@ -64,11 +64,11 @@ export const BentoGridItem = ({
         },
     };
 
-    // Função para lidar com o download
+
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/Curriculo.pdf";
-        link.download = "Curriculo.pdf";
+        link.href = "/Currículo - Guilherme Guimarães.pdf";
+        link.download = "Curriculo Guilherme Guimarães.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

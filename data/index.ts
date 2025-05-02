@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "Sobre", link: "#about" },
   { name: "Projetos", link: "#projects" },
-  { name: "GitHub", link: "https://github.com/sqrggm" },
+  { name: "GitHub", link: "https://github.com/martins-ggm" },
 ];
 
 export const gridItems = [
@@ -19,11 +19,11 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: " ~ As vezes também faço jogos por diversão :)",
+    title: " ~ As vezes também faço experiências web por diversão :)",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "brightness-50 w-full",
-    titleClassName: "justify-start",
+    titleClassName: "justify-start text-end",
     img: "/garrison abbey.jpeg",
     spareImg: "",
   },
@@ -75,17 +75,8 @@ export const projects = [
     id: 1,
     title: "Aplicativo de Gestão Financeira",
     des: "Iniciativa de um projeto universitário feito em colaboração com amigos! -- Em progresso...",
-    img: "/bluescreen.jpg",
+    img: "/Desktop Login.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
-    link: "",
-  },
-
-  {
-    id: 2,
-    title: "Em progresso...",
-    des: "Não era para você ver isso agora de qualquer forma...",
-    img: "/bluescreen.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "",
   },
 ];
@@ -94,11 +85,11 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "https://github.com/sqrggm",
+    link: "https://github.com/martins-ggm",
   },
   {
     id: 2,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/sqrggm/",
+    link: "https://www.linkedin.com/in/martins-ggm",
   },
 ];
