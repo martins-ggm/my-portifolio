@@ -3,6 +3,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
+import { Carousel } from "./ui/carousel";
 
 const RecentProjects = () => {
     return (
@@ -33,7 +34,7 @@ const RecentProjects = () => {
                                     src={img}
                                     alt="cover"
                                     className="z-10 absolute bottom-0"
-                                    
+
                                 />
                             </div>
 
