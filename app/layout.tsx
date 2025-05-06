@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Guilherme Martins | Portifolio",
-  description: "Modern & Minimalist JS Mastery Portfolio",
+  description: "Projetos e mais :)",
   icons: {
     icon: "/favicon.png",
   },
-  
+
 };
 
 export default function RootLayout({
