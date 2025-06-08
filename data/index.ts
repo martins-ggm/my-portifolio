@@ -73,11 +73,11 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Aplicativo de Gestão Financeira",
-    des: "Iniciativa de um projeto universitário feito em colaboração com amigos! -- Em progresso...",
+    title: "Aplicativo de Gestão Financeira: Wo! Money.",
+    des: "Iniciativa de um projeto de gerenciamento financeiro feito em colaboração com amigos!",
     img: "/Desktop Login.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
-    link: "",
+    iconLists: ["/tail.svg", "/ts.svg", "next.svg"],
+    link: "https://womoneyapp.vercel.app",
   },
 ];
 
